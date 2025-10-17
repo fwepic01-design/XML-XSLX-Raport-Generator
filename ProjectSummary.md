@@ -1,0 +1,96 @@
+# Excel to Word Converter - Project Summary
+
+## Project Overview
+
+This project implements a .NET WinForms application that converts data from Excel files to Word documents according to specific requirements.
+
+## Features Implemented
+
+1. **User Interface**:
+   - File selection for input Excel file
+   - File selection for output Word document
+   - Process button to initiate conversion
+   - Progress bar and status indicators
+
+2. **Data Processing**:
+   - Reads Excel files using ClosedXML library
+   - Processes data with "Nr projektu" (Project Number) and "Data" (Date) columns
+   - Groups data by project number
+   - Calculates date ranges (from-to) for each project
+   - Sums hours for each project
+
+3. **Document Generation**:
+   - Creates Word documents using DocumentFormat.OpenXml library
+   - Includes creation date in the header
+   - Lists project information (number, date range, total hours)
+   - Handles special case where start and end dates are the same
+
+## Technical Details
+
+- **Framework**: .NET 10.0 Windows Forms
+- **Libraries**:
+  - ClosedXML for Excel processing
+  - DocumentFormat.OpenXml for Word document creation
+- **Architecture**: Single form application with asynchronous processing
+
+## Files Created
+
+1. `ExcelToWordConverter/` - Main application
+   - `Form1.cs` - Main form logic
+   - `Form1.Designer.cs` - Form layout
+   - `Program.cs` - Application entry point
+   - `ExcelToWordConverter.csproj` - Project configuration
+   - `README.md` - User documentation
+
+2. `sample_data.xlsx` - Sample Excel data for testing
+
+3. `template_example.docx` - Example of output document format
+
+## How to Build and Run
+
+1. Navigate to the ExcelToWordConverter directory
+2. Run `dotnet build` to build the project
+3. Run `dotnet run` to start the application
+
+## Usage Instructions
+
+1. Launch the application
+2. Select an Excel file with project data
+3. Specify the output Word document location
+4. Click "Przetwórz" to convert the data
+5. The resulting Word document will contain the processed information
+
+## Sample Data Format
+
+The Excel file should have the following format:
+- First row: Headers ("Nr projektu", "Data", "Godziny")
+- Subsequent rows: Data rows with project information
+
+Example:
+| Nr projektu | Data       | Godziny |
+|-------------|------------|---------|
+| PROJ001     | 2025-01-15 | 8.5     |
+| PROJ001     | 2025-01-16 | 7.0     |
+| PROJ002     | 2025-01-20 | 6.0     |
+
+## Output Format
+
+The Word document will contain:
+- Creation date
+- For each project:
+  - Project number
+  - Date range (if start and end dates are the same, only one date is shown)
+  - Sum of hours
+
+Example output:
+```
+Data utworzenia: 16.10.2025
+
+Nr projektu: PROJ001
+Zakres dat: 15.01.2025-16.01.2025
+Suma godzin: 15.5
+
+Nr projektu: PROJ002
+Zakres dat: 20.01.2025-22.01.2025
+Suma godzin: 19.5
+```
