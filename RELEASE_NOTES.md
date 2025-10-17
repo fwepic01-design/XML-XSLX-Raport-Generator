@@ -1,13 +1,11 @@
 # Release Notes
 
-## v1.0.2 - Multi-language Support with Menu Bar ( in progress)
-*Added: Multi-language support for the user interface*
-- Added language selection through menu bar (English, Polish, Spanish)
-- All UI elements now translate based on selected language
-- Error messages and status texts are now localized
-- Default language is Polish (maintaining backward compatibility)
-- Language menu is positioned at the top of the application for easy access
-- Fixed menu bar visibility issues
+## v1.0.2 - English-only Version with Larger Window
+*Simplified: English-only user interface*
+- Removed all language translation complexity
+- Translated all UI elements to English
+- Increased window size for better usability
+- Simplified implementation for better stability
 
 ## v1.0.1 - Duplicate Text Fix
 *Fixed: Duplicate "Report Generated" text issue*
@@ -23,4 +21,3 @@
 - Groups data by project number
 - Calculates date ranges and sums hours
 - Generates Word documents with auto-generated filenames
-
