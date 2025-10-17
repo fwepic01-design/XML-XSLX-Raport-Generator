@@ -1,6 +1,6 @@
 # Release Notes
 
-## v1.0.2 - Multi-language Support with Menu Bar
+## v1.0.2 - Multi-language Support with Menu Bar ( in progress)
 *Added: Multi-language support for the user interface*
 - Added language selection through menu bar (English, Polish, Spanish)
 - All UI elements now translate based on selected language
@@ -23,3 +23,4 @@
 - Groups data by project number
 - Calculates date ranges and sums hours
 - Generates Word documents with auto-generated filenames
+
