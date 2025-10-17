@@ -1,3 +1,13 @@
+# Inportant Info
+
+**First**
+Source Code Files will be updated every Major version
+**Second (How versions work)**
+1 - Major Version
+.0 - Major Bug Fix
+.0 - Not inportant minimall fix
+ 
+
 # Template-Based Report Generation System
 
 ## Overview
