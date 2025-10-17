@@ -33,7 +33,7 @@ This project implements a .NET WinForms application that converts data from Exce
   - DocumentFormat.OpenXml for Word document creation
 - **Architecture**: Single form application with asynchronous processing
 
-## Files Created
+## Files Of The Project
 
 1. `ExcelToWordConverter/` - Main application
    - `Form1.cs` - Main form logic
@@ -57,7 +57,7 @@ This project implements a .NET WinForms application that converts data from Exce
 1. Launch the application
 2. Select an Excel file with project data
 3. Specify the output Word document location
-4. Click "Przetwórz" to convert the data
+4. Click "Proccess" to convert the data
 5. The resulting Word document will contain the processed information
 
 ## Sample Data Format
@@ -86,11 +86,12 @@ Example output:
 ```
 Data utworzenia: 16.10.2025
 
-Nr projektu: PROJ001
-Zakres dat: 15.01.2025-16.01.2025
-Suma godzin: 15.5
+Project Nr: PROJ001
+Date-Range: 15.01.2025-16.01.2025
+Hours summary: 15.5
 
-Nr projektu: PROJ002
-Zakres dat: 20.01.2025-22.01.2025
-Suma godzin: 19.5
+Project Nr: PROJ002
+Date-Range: 20.01.2025-22.01.2025
+Hours summary: 19.5
+
 ```
