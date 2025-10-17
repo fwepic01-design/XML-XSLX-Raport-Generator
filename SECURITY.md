@@ -17,8 +17,8 @@ We take the security of our software seriously. If you believe you have found a 
 
 ### Reporting Process
 
-1. **Email**: Send an email to filip.wolinski@example.com with the subject line "Security Vulnerability Report - ExcelToWordConverter"
-2. **Include**: 
+1. **Email**: Send an email to fwepic01@gmial.com  with the subject line "Security Vulnerability Report - ExcelToWordConverter"
+3. **Include**: 
    - A description of the vulnerability and its potential impact
    - Steps to reproduce or proof-of-concept
    - Any known mitigations or workarounds
