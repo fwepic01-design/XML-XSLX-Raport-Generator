@@ -8,7 +8,7 @@ Source Code Files will be updated every Major version
 
 1 - Major Version
 .0 - Major Bug Fix
-.0 - Not inportant minimall fix
+.0 - Small patch
  
 
 # Template-Based Report Generation System
