@@ -1,30 +1,25 @@
 # Release Notes
 
-## Version 1.0.1 (2025-10-17)
+## v1.0.2 - Multi-language Support with Menu Bar
+*Added: Multi-language support for the user interface*
+- Added language selection through menu bar (English, Polish, Spanish)
+- All UI elements now translate based on selected language
+- Error messages and status texts are now localized
+- Default language is Polish (maintaining backward compatibility)
+- Language menu is positioned at the top of the application for easy access
+- Fixed menu bar visibility issues
 
-### Bug Fixes
+## v1.0.1 - Duplicate Text Fix
+*Fixed: Duplicate "Report Generated" text issue*
+- Resolved issue where "Report Generated" text appeared twice in output documents
+- Removed duplicate addition in the fallback template processing method
+- Maintained proper functionality for both template-based and fallback processing
 
-#### Fixed Duplicate "Report Generated" Text Issue
-- **Issue**: The "Report Generated" text was appearing twice in the output document:
-  1. First occurrence: "Report Generated: CreationDate" (from template placeholder)
-  2. Second occurrence: "Report Generated: XX.XX.XXXX" (actual date)
-- **Root Cause**: Both the [ReplacePlaceholdersWithTemplate] and [ReplacePlaceholders] methods were adding the "Report Generated" text
-- **Fix**: Modified the [ReplacePlaceholders] method to remove the duplicate "Report Generated" text addition, since it's already handled in [ReplacePlaceholdersWithTemplate]
-- **Result**: "Report Generated" now appears only once in the output document with the correct date format (DD.MM.YYYY)
-
-### Technical Details
-
-The fix ensures that:
-1. When using a proper template with "Report Generated: CreationDate" placeholder, it gets replaced with the current date
-2. When falling back to the simplified replacement method, it doesn't add a duplicate "Report Generated" text
-3. The date format remains consistent as DD.MM.YYYY
-
-### Testing
-
-The fix has been tested with:
-- Templates containing the "Report Generated: CreationDate" placeholder
-- Templates without the proper structure (fallback scenario)
-- Both XML and Excel data sources
-- Various project data configurations
-
-The output now correctly displays "Report Generated: XX.XX.XXXX" only once at the beginning of the document.
+## v1.0.0 - Initial Release
+*Initial release of the Excel to Word Converter*
+- Load data from Excel files (.xlsx, .xls) or XML files
+- Use customizable Word templates for report generation
+- Process project data with project numbers and dates
+- Groups data by project number
+- Calculates date ranges and sums hours
+- Generates Word documents with auto-generated filenames
